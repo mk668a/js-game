@@ -7,11 +7,13 @@
         var v = document.getElementById("number").value;
         var r = document.getElementById("result");
         if (!v) {
-          r.textContent = "入力してください"
+          r.textContent = "入力してください";
         } else if (isNaN(v)) {
-          r.textContent = v + "は数字でない"
+          r.textContent = v + "は数字でない";
         } else {
-          r.textContent = v + "は数字です"
+          r.textContent = (v % 2 == 0)
+            ? v + "は偶数の数字です"
+            : v + "は奇数の数字です";
         }
       }
     </script>
@@ -19,7 +21,18 @@
   <body>
     <input id="number"/>
     <button onclick="checkEven()">入力判定</button>
-    <p id="result"></p>
+    <p>
+      <a >判定:
+      </a>
+      <a id="result"></a>
+    </p>
   </body>
 
 </html>
+
+<style>
+  p {
+    margin: 50px;
+    border-bottom: 1px solid black;
+  }
+</style>
