@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var i = 1
+      // この段階ではhtmlが読み込まれていないため、containerを取得できない。 var container = document.getElementById("container");
+
+      function insertItem() {
+        var container = document.getElementById("container");
+        var item = document.createElement("li");
+
+        item.textContent = "hello " + i;
+        container.appendChild(item);
+        i += 1;
+      }
+
+      function removeItem() {
+        var container = document.getElementById("container");
+        var item = container.lastChild;
+
+        if (item) {
+          container.removeChild(item);
+          i -= 1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="insertItem()">insert</button>
+    <button onclick="removeItem()">delete</button>
+    <ol id="container"></ol>
+  </body>
+</html>
