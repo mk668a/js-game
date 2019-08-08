@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>triangle</title>
+    <script type="text/javascript">
+      var ctx;
+
+      function init() {
+        var canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 10;
+
+        // パスをクリア
+        ctx.beginPath();
+        // 最初の位置
+        ctx.moveTo(100, 100);
+        // パスを作成
+        ctx.lineTo(150, 50);
+        ctx.lineTo(200, 100);
+        // パスに描画
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.strokeStyle = "#FF00FF";
+        ctx.moveTo(300, 100);
+        ctx.lineTo(350, 50);
+        ctx.lineTo(400, 100)
+        // パスを閉じる
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.fillStyle = "red";
+        ctx.moveTo(500, 100);
+        ctx.lineTo(550, 50);
+        ctx.lineTo(600, 100);
+        // パスを塗りつぶす
+        ctx.fill();
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <canvas id="canvas" width="600" height="400"></canvas>
+  </body>
+</html>
