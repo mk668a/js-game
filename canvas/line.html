@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>line</title>
+    <script type="text/javascript">
+      // コンテキスト
+      var ctx;
+      function init() {
+        var canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+        // 線や輪郭の色
+        ctx.strokeStyle = "blue";
+        // 塗りつぶしの色
+        ctx.fillStyle = "pink";
+        // 線の幅
+        ctx.lineWidth = 5;
+        // 線の終端の形状で、butt、round、squareの値が使⽤可能
+        ctx.lineCap = "square";
+        // 現在の影の⾊
+        ctx.shadowColor = "purple";
+        // 影に適⽤するぼかす範囲
+        ctx.shadowBlur = 10;
+
+        // 線を引く
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(300, 150);
+        ctx.stroke();
+
+        // 矩形を書く
+        ctx.fillRect(100, 200, 200, 100);
+        ctx.strokeRect(100, 200, 200, 100);
+      }
+    </script>
+  </head>
+  <canvas id="canvas" width="600" height="400"></canvas>
+  <body onload="init()"></body>
+
+</html>
