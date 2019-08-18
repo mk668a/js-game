@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>arow</title>
+    <script type="text/javascript">
+      var name = "taro",
+        age = 18
+      console.log("リテラル", name, age);
+
+      let getTriangle = function (base, height) {
+        return base * height / 2
+      }
+      console.log("三角形の面積は" + getTriangle(10, 2));
+
+      console.log("アロー関数");
+      let getTriangle2 = (base, height) => {
+        return base * height / 2
+      }
+      console.log("三角形の面積は" + getTriangle2(10, 2));
+
+      console.log("より簡単に");
+      let getTriangle3 = (base, height) => base * height / 2
+      console.log("三角形の面積は" + getTriangle3(10, 2));
+
+      console.log("引数が一つの場合");
+      let getCircle = radius => radius * radius * Math.PI
+      console.log(getCircle(10));
+
+      console.log("引数がない場合");
+      let show = () => "hello,world"
+      console.log(show());
+    </script>
+  </head>
+  <body>
+    <a href="https://qiita.com/may88seiji/items/4a49c7c78b55d75d693b" target="_blank">JavaScript アロー関数を説明するよ</a>の勉強
+    <div>
+      log開いて
+    </div>
+
+    <h1>script</h1>
+    <pre>
+      &lt;script type="text/javascript"&gt;
+        var name = "taro",
+          age = 18
+        console.log("リテラル", name, age);
+
+        let gettriangle = function (base, height) {
+          return base * height / 2
+        }
+        console.log("三角形の面積は" + gettriangle(10, 2));
+
+        console.log("アロー関数");
+        let gettriangle2 = (base, height) => {
+          return base * height / 2
+        }
+        console.log("三角形の面積は" + gettriangle2(10, 2));
+
+        console.log("より簡単に");
+        let gettriangle3 = (base, height) => base * height / 2
+        console.log("三角形の面積は" + gettriangle3(10, 2));
+
+        console.log("引数が一つの場合");
+        let getcircle = radius => radius * radius * math.pi
+        console.log(getcircle(10));
+
+        console.log("引数がない場合");
+        let show = () => "hello,world"
+        console.log(show());
+      &lt;/script&gt;
+    </pre>
+  </body>
+</html>
